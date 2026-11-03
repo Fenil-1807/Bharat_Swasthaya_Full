@@ -1,0 +1,143 @@
+import React from "react";
+import {
+  AlertCircle,
+  Sparkles,
+  ShieldCheck,
+  CheckCircle2,
+  Bug,
+  Activity,
+  ChevronRight,
+} from "lucide-react";
+
+export const ProactiveAlertCard = ({ alert, onSelectAlert }) => {
+  const isHighRisk = alert.riskLevel === "high" || alert.riskLevel === "severe";
+
+  const getRiskBadge = (level) => {
+    switch (level) {
+      case "severe":
+        return "bg-rose-50 text-rose-700 border-rose-300";
+      case "high":
+        return "bg-rose-50 text-rose-700 border-rose-300";
+      case "moderate":
+        return "bg-amber-50 text-amber-700 border-amber-300";
+      default:
+        return "bg-emerald-50 text-emerald-700 border-emerald-300";
+    }
+  };
+
+  return (
+    <div
+      onClick={() => onSelectAlert && onSelectAlert(alert)}
+      className={`rounded-3xl p-5 sm:p-6 transition-all bg-white border shadow-sm glass-card-hover cursor-pointer group ${
+        isHighRisk
+          ? "border-rose-200 hover:border-rose-300"
+          : "border-slate-200 hover:border-teal-300"
+      }`}
+    >
+      {/* Top Banner */}
+      <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+        <div>
+          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+            <span
+              className={`text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${getRiskBadge(
+                alert.riskLevel
+              )}`}
+            >
+              {alert.riskLevel} Risk Outbreak
+            </span>
+            {alert.isViral && (
+              <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1">
+                <Bug className="w-3 h-3 text-blue-600" /> Contagious Viral
+              </span>
+            )}
+            <span className="text-xs text-slate-500 font-medium">
+              📍 {alert.city !== "All" ? `${alert.city}, ` : ""}{alert.district}, {alert.state}
+            </span>
+          </div>
+
+          <h3 className="font-display font-bold text-lg sm:text-xl text-slate-900 group-hover:text-teal-700 transition-colors flex items-center gap-2">
+            {alert.diseaseName}
+          </h3>
+        </div>
+
+        <div className="flex items-center gap-1.5 bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-xl border border-teal-200 group-hover:bg-teal-100 transition-colors">
+          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+          <span>AI Proactive Forecast</span>
+        </div>
+      </div>
+
+      {/* Summary */}
+      <p className="text-sm text-slate-600 leading-relaxed mb-4">{alert.summary}</p>
+
+      {/* Symptoms To Watch & Precautions Preview */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+        {/* Symptoms */}
+        {alert.symptomsToWatch?.length > 0 && (
+          <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2 flex items-center gap-1.5">
+              <Activity className="w-3.5 h-3.5 text-rose-600" />
+              Symptoms to Watch
+            </h4>
+            <div className="flex flex-wrap gap-1.5">
+              {alert.symptomsToWatch.slice(0, 3).map((sym, idx) => (
+                <span
+                  key={idx}
+                  className="text-xs bg-white text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200 font-medium"
+                >
+                  {sym}
+                </span>
+              ))}
+              {alert.symptomsToWatch.length > 3 && (
+                <span className="text-xs text-teal-700 font-semibold px-1 py-1">
+                  +{alert.symptomsToWatch.length - 3} more
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Precautions */}
+        {alert.recommendedPrecautions?.length > 0 && (
+          <div className="p-3.5 rounded-2xl bg-teal-50/50 border border-teal-200">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-teal-800 mb-2 flex items-center gap-1.5">
+              <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
+              Recommended Precautions
+            </h4>
+            <ul className="space-y-1.5 text-xs text-slate-700">
+              {alert.recommendedPrecautions.slice(0, 2).map((prec, idx) => (
+                <li key={idx} className="flex items-start gap-1.5 truncate">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-teal-600 shrink-0 mt-0.5" />
+                  <span className="truncate">{prec}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      {/* AI Insights & View Details Click CTA */}
+      <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+        <div className="flex items-center gap-1.5 text-slate-500">
+          <Sparkles className="w-4 h-4 text-teal-600 shrink-0" />
+          <span className="truncate max-w-[280px] sm:max-w-md">
+            {alert.aiInsights || "Synthesized from multi-source epidemiological telemetry."}
+          </span>
+        </div>
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            if (onSelectAlert) onSelectAlert(alert);
+          }}
+          className="text-teal-700 group-hover:text-teal-800 font-bold flex items-center gap-1 shrink-0 ml-2"
+        >
+          <span>Full Details</span>
+          <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ProactiveAlertCard;
+
