@@ -302,7 +302,10 @@ Information and availability of services depend on the accuracy, freshness, and 
 
 GitHub: "Fenil-1807/Bharat_Swasthaya_Full" (https://github.com/Fenil-1807/Bharat_Swasthaya_Full)
 
----
+## 📄 License
+
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
 
 🇮🇳 Building a More Accessible Healthcare Future
 
