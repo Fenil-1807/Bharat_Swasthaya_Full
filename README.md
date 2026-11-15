@@ -297,8 +297,8 @@ By connecting citizens, frontline workers, doctors, hospitals, and public-health
 
 | Resource | Link |
 |:--|:--|
-| 💻 **GitHub Repository** | [BharatSwasthya AI](#) |
-| 🎬 **Project Demo and Videos** | [View Demo](#) |
+| 💻 **GitHub Repository** | [](#) |
+| 🎬 **Project Demo and Videos** | [https://decode-sih-website.vercel.app](#) |
 
 ---
 
