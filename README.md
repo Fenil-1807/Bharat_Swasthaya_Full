@@ -297,7 +297,7 @@ By connecting citizens, frontline workers, doctors, hospitals, and public-health
 
 | Resource | Link |
 |:--|:--|
-| 💻 **GitHub Repository** | [](#) |
+| 💻 **GitHub Repository** | [https://github.com/Fenil-1807/Bharat_Swasthaya_Full.git](#) |
 | 🎬 **Project Demo and Videos** | [https://decode-sih-website.vercel.app](#) |
 
 ---
