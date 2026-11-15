@@ -1,313 +1,329 @@
-🇮🇳 Bharat Swasthya AI
+# 🇮🇳 BharatSwasthya AI
 
-AI-Powered Healthcare Accessibility & Proactive Public Health Intelligence
+**An agentic, multilingual healthcare ecosystem for India, reachable through the web and through an ordinary phone call.**
 
-Explore. Discover. Get Assisted. Stay Healthy.
+BharatSwasthya AI connects citizens, frontline health workers, doctors, hospitals, and public-health administrators through AI-powered guidance, government scheme intelligence, hospital resource discovery, and proactive disease early-warning advisories.
 
-Bharat Swasthya AI is an AI-powered healthcare platform designed to make healthcare information more accessible, simplify healthcare discovery, and support proactive public health awareness.
-
-The platform brings together healthcare discovery, AI-powered assistance, conversational support, and health intelligence into one unified ecosystem.
+> Healthcare Accessibility • Agentic AI • Preventive Intelligence
 
 ---
 
-📌 Table of Contents
+## 📌 Overview
 
-- "Overview" (#-overview)
-- "Key Features" (#-key-features)
-- "Platform Modules" (#-platform-modules)
-- "System Architecture" (#-system-architecture)
-- "Technology Stack" (#-technology-stack)
-- "Project Structure" (#-project-structure)
-- "Getting Started" (#-getting-started)
-- "Environment Configuration" (#-environment-configuration)
-- "Future Scope" (#-future-scope)
-- "Contributing" (#-contributing)
-- "Disclaimer" (#-disclaimer)
+Healthcare information, hospital resources, government schemes, and disease surveillance in India often live on separate, disconnected platforms. This creates accessibility barriers, particularly for rural communities and underserved populations.
 
----
+BharatSwasthya AI brings these services together into one connected, intelligent ecosystem. It links citizens, frontline health workers, doctors, hospitals, and public-health administrators through multilingual AI assistance, voice-based healthcare access, intelligent knowledge retrieval, hospital resource discovery, and proactive disease intelligence.
 
-🌐 Overview
+The platform is built around three principles:
 
-Accessing reliable healthcare information can be challenging, especially when people struggle to find nearby healthcare facilities, understand available services, or navigate complex healthcare resources.
+- **🌐 Accessibility:** healthcare information is available through both a website and ordinary phone calls.
+- **🧠 Intelligence:** Agentic AI and Retrieval-Augmented Generation (RAG) connect healthcare information and services.
+- **🛡️ Prevention:** validated community health reports are combined with environmental intelligence to support early identification of potential regional health risks.
 
-Bharat Swasthya AI aims to address these challenges through an integrated digital healthcare ecosystem.
-
-The platform focuses on three major pillars:
-
-Pillar| Purpose
-🏥 Healthcare Discovery| Simplifies the discovery of hospitals, healthcare facilities, departments, and available resources.
-🤖 AI-Powered Assistance| Helps users understand healthcare information through conversational AI.
-📊 Proactive Health Intelligence| Supports public health awareness through disease-related insights and geographical intelligence.
+> **Disclaimer:** BharatSwasthya AI supports healthcare awareness and navigation. It does not replace qualified medical professionals.
 
 ---
 
-🚀 Key Features
+## 🎯 Motivation
 
-1. 🏥 Healthcare Discovery
+India's healthcare ecosystem faces several interconnected challenges:
 
-A healthcare discovery experience that helps users explore healthcare facilities and relevant services.
+- Healthcare information is fragmented across different platforms and systems.
+- It is difficult to find appropriate medical facilities and know what resources they have available.
+- Awareness and understanding of government healthcare schemes is limited.
+- Language and digital literacy barriers restrict access to reliable healthcare guidance.
+- Coordination between frontline health workers, doctors, hospitals, and administrators is limited.
+- Emerging regional health risks are hard to identify, and preventive information is hard to communicate in time.
 
-- Search for hospitals and healthcare facilities.
-- Explore departments and available services.
-- View facility-related information.
-- Access bed availability information where supported.
-- Make healthcare discovery more accessible through a unified interface.
+Together, these challenges can result in delayed healthcare access, increased financial burden, poor awareness of available benefits, and missed opportunities for preventive action.
 
-2. 🤖 Guide LLM — AI Healthcare Assistant
-
-An AI-powered conversational assistant designed to help users navigate healthcare-related information.
-
-- Understands natural-language questions.
-- Provides conversational healthcare guidance.
-- Helps users explore healthcare services.
-- Simplifies access to relevant healthcare information.
-- Supports a more accessible interaction experience.
-
-3. 📊 Proactive LLM — Health Intelligence
-
-A proactive health intelligence component focused on disease awareness and public health insights.
-
-- Disease-related information and reports.
-- Health trend analysis.
-- Geographical health insights.
-- Potential outbreak awareness.
-- Data-driven public health intelligence.
-
-4. 💬 AI Chatbot
-
-A conversational interface that allows users to interact with the platform and access assistance through natural-language queries.
-
-5. 📞 AI Calling Agent
-
-A voice-based assistance concept intended to make healthcare information more accessible to people who may have difficulty using conventional digital interfaces.
-
-Potential capabilities include:
-
-- Voice-based interaction.
-- Conversational assistance.
-- Healthcare information access.
-- Support for users with limited digital literacy.
-
-Availability of individual voice and telephony integrations depends on the configured services.
+**What is needed** is an integrated, multilingual, AI-driven healthcare ecosystem that makes healthcare more accessible, connected, and proactive.
 
 ---
 
-🧩 Platform Modules
+## ✨ Features
 
-The project is organized into multiple components, each responsible for a specific part of the healthcare ecosystem.
+### 🤖 Multilingual AI Healthcare Assistant
 
-Module| Responsibility
-"BS-AI_website-main"| Main web application
-"BharatSwasthya-AI-main/health"| Healthcare-related functionality
-"Guide_LLM-main"| AI-powered healthcare guidance
-"ProactiveLLM-main"| Proactive health intelligence
-"chatbot-main"| Conversational chatbot
-"BharatCode.txt"| Supporting project documentation
+A conversational assistant powered by Google Gemini and built with LangChain and LangGraph. It provides general healthcare guidance, symptom-related information, and preventive recommendations, and helps users understand appropriate next steps. Conversations are contextual and supported in nine Indian languages. The assistant is connected to hospital discovery and government scheme information, so a single conversation can move naturally from a health question to finding a facility or a relevant scheme.
+
+### 🏛️ Government Scheme Intelligence
+
+A Retrieval-Augmented Generation (RAG) system that makes government healthcare schemes easier to discover and understand. It retrieves relevant information from scheme knowledge sources, explains eligibility criteria and available benefits, and helps users understand application procedures. This information is integrated directly into the assistant's answers.
+
+Built with **Qdrant**, **Jina Embeddings**, and **Cohere Reranking**.
+
+### 📞 AI-Powered Voice Calling Agent
+
+A voice-first system designed to bridge the digital accessibility gap. Citizens can get healthcare assistance through an ordinary phone call, with multilingual voice interaction, instead of navigating a website or smartphone app. This is especially useful for elderly citizens and people with limited digital literacy.
+
+Access to healthcare information should not depend on owning or understanding a smartphone.
+
+Built with **Exotel** and **Sarvam AI**.
+
+### 🦠 Proactive Disease Surveillance and Early Warning
+
+An AI-powered public-health intelligence system that connects community health reports with regional weather and environmental information. It works in four steps:
+
+1. Frontline health workers submit community-level health reports.
+2. Doctors review and validate the submitted information.
+3. The proactive intelligence engine analyzes the validated reports alongside weather and environmental conditions.
+4. Gemini generates location-specific preventive health advisories and alerts.
+
+**Example: dengue risk intelligence.** When frontline workers report increasing fever cases and doctors validate a dengue-related pattern, the system combines these reports with environmental indicators such as rainfall and humidity. It then identifies potential regional risk and generates relevant dengue-prevention advisories. This supports a shift from reactive healthcare towards proactive disease awareness and prevention.
+
+### 🏥 Hospital Bed Availability and Resource Explorer
+
+A location-based discovery system that helps citizens find suitable medical facilities. Users can see nearby hospitals along with general and ICU bed availability, including total, occupied, and vacant capacity. Ward charges are displayed where the information is available. Hospitals manage their own information through dedicated portals, and users can navigate to a facility through Google Maps integration.
+
+### 👨‍⚕️ Healthcare Worker and Administration Portals
+
+Dedicated portals connect the stakeholders involved in community healthcare management, creating a connected flow of information from communities up to administrators.
+
+| Stakeholder | Responsibilities |
+|:--|:--|
+| 🧑‍⚕️ **Frontline Health Workers** | Submit community-level health reports. |
+| 👨‍⚕️ **Doctors** | Review and validate submitted reports. |
+| 🏥 **Hospitals** | Manage hospital profiles and bed availability. |
+| 🧑‍💼 **Administrators** | Monitor health reports, disease information, and proactive alerts. |
+
+### 🚑 Emergency Assistance and Preventive Alerts
+
+Essential healthcare information and emergency help are made easier to reach. Users get quick access to India's 108 ambulance service, along with preventive healthcare information and proactive regional health advisories.
+
+### 🔗 Agentic AI Integration and Workflow Testing
+
+Rather than treating AI capabilities as isolated modules, BharatSwasthya AI connects them into coordinated workflows. LangGraph handles agentic workflow orchestration and tool interactions, bringing together multiple AI services, APIs, and external capabilities. Services are developed, integrated, and tested through AgentFoundry IDE, where workflow testing verifies that platform components communicate correctly.
+
+Built with **AgentFoundry IDE**, **LangChain**, **LangGraph**, and **Google Gemini**.
 
 ---
 
-🏗️ System Architecture
+## 🔄 How It Works
 
-The following diagram represents the logical organization of the platform and its major components.
+BharatSwasthya AI connects community-level healthcare information with AI-powered intelligence and citizen-facing services. The two diagrams below show how data flows through the system.
 
+### Community Health Intelligence Flow
+
+Health reports move from the field to doctors for validation, then combine with weather data to produce preventive alerts for citizens.
+
+```mermaid
 flowchart TD
-    A[User] --> B[Bharat Swasthya AI Web Platform]
+    A[Frontline Health Workers] --> B[Community Health Reports]
+    B --> C[Doctor Review and Validation]
+    C --> D[Validated Health Reports]
 
-    B --> C[Healthcare Discovery]
-    B --> D[Guide LLM]
-    B --> E[Proactive LLM]
-    B --> F[AI Chatbot]
-    B --> G[AI Calling Agent]
+    E[Weather and Environmental Data] --> F[Proactive AI Intelligence]
+    D --> F
 
-    C --> H[Healthcare Information]
-    D --> I[AI-Powered Guidance]
-    E --> J[Health Intelligence]
-    F --> I
-    G --> I
+    F --> G[Regional Health Risk Analysis]
+    G --> H[Gemini-Powered Advisory Generation]
+    H --> I[Preventive Health Alerts]
+    I --> J[Citizen Awareness and Prevention]
+```
 
-    H --> K[Unified Healthcare Experience]
-    I --> K
-    J --> K
+### Citizen Access Flow
 
-This is a high-level conceptual architecture. Actual integrations and communication between modules depend on their individual implementations.
+Citizens reach the same connected services through either a phone call or the website.
 
----
+```mermaid
+flowchart TD
+    A[BharatSwasthya AI] --> B[Voice Calling]
+    A --> C[Website]
 
-🛠️ Technology Stack
+    B --> D[AI Voice Agent]
+    C --> E[AI Healthcare Assistant]
 
-The project brings together web development, backend services, databases, and AI technologies.
+    D --> F[Connected Healthcare Services]
+    E --> F
 
-Category| Technologies
-Frontend| React.js, JavaScript, HTML, CSS
-Backend| Node.js, Express.js
-Database| MongoDB
-AI & LLM| Generative AI, Large Language Models
-AI Integration| Gemini API (where configured)
-Voice Integration| Twilio (where configured)
-Development Tools| Git, GitHub, VS Code
+    F --> G[Healthcare Guidance]
+    F --> H[Government Scheme Intelligence]
+    F --> I[Hospital Discovery]
+    F --> J[Preventive Health Information]
+```
 
-The technologies listed reflect the project's intended or identified technology stack. Individual modules may use different dependencies or configurations.
+### Connected Stakeholder Ecosystem
 
----
-
-📂 Project Structure
-
-Bharat_Swasthaya_Full/
-│
-├── BS-AI_website-main/
-│   ├── client/
-│   └── server/
-│
-├── BharatSwasthya-AI-main/
-│   └── health/
-│
-├── Guide_LLM-main/
-│
-├── ProactiveLLM-main/
-│
-├── chatbot-main/
-│
-├── BharatCode.txt
-│
-└── README.md
-
-The repository contains multiple modules. Each module may have its own dependencies, configuration files, and execution instructions.
+| Stakeholder | Platform interaction |
+|:--|:--|
+| 🙋 **Citizens** | Access healthcare assistance, schemes, hospitals, and preventive information. |
+| 🧑‍⚕️ **Health Workers** | Report community health conditions. |
+| 👨‍⚕️ **Doctors** | Validate health reports and medical information. |
+| 🏥 **Hospitals** | Update healthcare resources and bed availability. |
+| 🧑‍💼 **Administrators** | Monitor community health information and regional alerts. |
+| 🤖 **AI Services** | Process information, coordinate workflows, and generate relevant intelligence. |
 
 ---
 
-⚙️ Getting Started
+## 🛠️ Built With
 
-Follow these steps to get the project running locally.
+The platform combines modern web technologies, AI orchestration frameworks, retrieval infrastructure, and voice communication services.
 
-Prerequisites
+| Category | Technologies |
+|:--|:--|
+| 🎨 **Frontend** | React.js, Vite, Tailwind CSS |
+| ⚙️ **Backend** | Node.js, Express.js |
+| 🗄️ **Database** | MongoDB |
+| 🐍 **AI Services** | Python, FastAPI |
+| 🕸️ **Agentic AI** | AgentFoundry IDE, LangChain, LangGraph |
+| 🧠 **Large Language Model** | Google Gemini |
+| 🔎 **Vector Database** | Qdrant |
+| 🔤 **Embeddings** | Jina Embeddings |
+| 📈 **Reranking** | Cohere Reranking |
+| 🎙️ **Voice AI** | Exotel, Sarvam AI |
+| 🌦️ **Weather Intelligence** | Open-Meteo |
+| 🗺️ **Maps and Navigation** | Google Maps APIs |
 
-Make sure you have the following installed:
+**How the pieces fit together**
 
-- "Node.js" (https://nodejs.org/)
-- npm
-- "Git" (https://git-scm.com/)
-- MongoDB, if required by the module you want to run
-- API credentials for external services, where applicable
-
-1. Clone the Repository
-
-git clone https://github.com/Fenil-1807/Bharat_Swasthaya_Full.git
-
-2. Navigate to the Project
-
-cd Bharat_Swasthaya_Full
-
-3. Install Dependencies
-
-The project contains multiple modules. Navigate to the relevant module directory and install its dependencies.
-
-For example:
-
-cd BS-AI_website-main/client
-npm install
-
-For the backend:
-
-cd ../server
-npm install
-
-Repeat the process for other modules that contain their own "package.json" files.
-
-4. Configure Environment Variables
-
-Create the required ".env" files in the relevant module directories.
-
-Refer to each module's configuration and source code to identify the required environment variable names.
-
-5. Run the Application
-
-Check the "scripts" section of the relevant "package.json" file to identify the available commands.
-
-For example, if the module defines a development script:
-
-npm run dev
-
-Run each required service according to its individual setup instructions.
+- React, Vite, and Tailwind CSS build the interactive frontend and the stakeholder portals.
+- Node.js and Express.js handle backend APIs and application services, with MongoDB storing application and healthcare data.
+- Python and FastAPI run the separate AI-powered services.
+- LangChain and LangGraph orchestrate agents and tool interactions, with Google Gemini powering conversation and AI-generated health intelligence.
+- Qdrant provides vector-based retrieval, Jina Embeddings represent scheme information semantically, and Cohere Reranking improves the relevance of what is retrieved.
+- Exotel and Sarvam AI enable voice-based interactions.
+- Open-Meteo supplies weather data, and Google Maps APIs power hospital discovery and navigation.
 
 ---
 
-🔐 Environment Configuration
+## 🌟 Why It Stands Out
 
-Some modules may require external API credentials or service configuration.
+The primary innovation of BharatSwasthya AI is not any individual AI feature, but the **integration of multiple healthcare services into one connected ecosystem**.
 
-Examples include:
+| Conventional challenge | Our approach |
+|:--|:--|
+| Fragmented healthcare information | Unified healthcare information ecosystem |
+| Application-dependent accessibility | Website and ordinary phone-call access |
+| Difficulty understanding healthcare schemes | RAG-powered scheme intelligence |
+| Disconnected community health reporting | Connected health worker and doctor portals |
+| Limited regional health intelligence | AI-assisted analysis of validated reports and environmental conditions |
+| Limited hospital resource visibility | Location-based hospital and bed discovery |
+| Isolated AI capabilities | Coordinated agentic AI workflows |
 
-- Database connection strings.
-- AI model API keys.
-- Voice or telephony service credentials.
-- Other third-party service configuration.
+### 📞💻 Voice plus Web Access
 
-Important security practices:
-
-- Never commit API keys or passwords.
-- Keep credentials inside ".env" files.
-- Add ".env" files to ".gitignore".
-- Use environment variables instead of hardcoding secrets.
-- Do not expose private credentials in frontend code.
-
----
-
-🔮 Future Scope
-
-Bharat Swasthya AI can be extended with additional capabilities to improve accessibility and public health intelligence.
-
-- 🌍 Multilingual Assistance: Support for more Indian languages.
-- 📞 Advanced Voice Assistance: Improved voice-based healthcare interactions.
-- 🗺️ Geospatial Health Intelligence: More detailed geographical disease analysis.
-- 🏥 Real-Time Healthcare Data: Improved integration with healthcare facilities and live capacity information.
-- 🔔 Proactive Notifications: Timely public health alerts and awareness messages.
-- 📈 Advanced Analytics: Better disease trend analysis and predictive insights.
-- 🏛️ Healthcare Ecosystem Integration: Integration with relevant public healthcare services and digital health initiatives.
+Our strongest differentiator is offering two complementary access channels. **Voice-first access** lets citizens get healthcare assistance through ordinary phone calls, while **digital access** lets website users explore services and interact with the AI assistant. Together they make healthcare information inclusive for people with different levels of digital literacy, language preferences, and technology access.
 
 ---
 
-🤝 Contributing
+## 📊 Scale of the Problem
 
-Contributions, suggestions, and improvements are welcome.
+Healthcare accessibility, affordability, awareness, and preventive care remain significant challenges in India. A few indicators show the scale:
 
-1. Fork the repository.
-2. Create a new branch.
+| Indicator | Reported figure |
+|:--|:--|
+| 💸 **Out-of-pocket expenditure** | 43.4% of India's total health expenditure (National Health Accounts Estimates 2022-23) |
+| 🧑‍⚕️ **ASHA workforce** | Over 10 lakh frontline ASHA workers |
+| 🏛️ **PM-JAY awareness** | 62% awareness among surveyed respondents in a six-state study |
 
-git checkout -b feature/your-feature-name
+These numbers point to several consequences:
 
-3. Make your changes.
-4. Commit your changes.
+- **Financial barriers:** high out-of-pocket expenditure increases the burden on households.
+- **Awareness gaps:** limited understanding of government schemes can prevent citizens from accessing benefits they are entitled to.
+- **Accessibility barriers:** language and digital literacy challenges restrict access to healthcare information.
+- **Coordination gaps:** disconnected health reporting can delay identification of emerging health concerns.
+- **Resource visibility:** limited information about hospital resources makes facility discovery harder.
 
-git commit -m "Add: your feature description"
-
-5. Push your branch.
-
-git push origin feature/your-feature-name
-
-6. Open a Pull Request.
-
----
-
-⚠️ Disclaimer
-
-Bharat Swasthya AI is a technology project intended to improve access to healthcare-related information and public health awareness.
-
-It is not a substitute for professional medical advice, diagnosis, or treatment. Users should consult qualified healthcare professionals for medical decisions.
-
-Information and availability of services depend on the accuracy, freshness, and integration of the underlying data sources.
+The problem is therefore not simply the availability of healthcare services, but the lack of effective coordination, accessibility, and proactive intelligence across the existing healthcare ecosystem.
 
 ---
 
-👨‍💻 Project Repository
+## 🎯 Expected Impact
 
-GitHub: "Fenil-1807/Bharat_Swasthaya_Full" (https://github.com/Fenil-1807/Bharat_Swasthaya_Full)
+| Beneficiary | Expected impact |
+|:--|:--|
+| 🙋 **Citizens** | Better access to multilingual healthcare guidance, schemes, and hospital discovery. |
+| 🌾 **Rural Communities** | Healthcare assistance through voice-based interactions. |
+| 🧑‍⚕️ **ASHA and Frontline Workers** | Digital community health reporting and improved coordination. |
+| 👨‍⚕️ **Doctors** | Improved visibility and validation of community health information. |
+| 🏥 **Hospitals** | Better visibility and management of healthcare resources. |
+| 🧑‍💼 **Public-Health Administrators** | Monitoring of health reports, regional risks, and preventive advisories. |
+
+**Expected outcomes**
+
+- Reduced effort in finding relevant healthcare information and nearby facilities
+- Improved awareness of government healthcare schemes
+- Increased accessibility through multilingual voice interactions
+- Better coordination between frontline health workers, doctors, and administrators
+- Faster communication of preventive health advisories
+- Improved visibility into hospital resource availability
+- Support for proactive identification of potential regional disease risks
+
+> These are expected outcomes, not independently measured impact figures.
+
+---
+
+## 🚀 Deployment and Scalability
+
+BharatSwasthya AI has been developed as a full-stack healthcare platform with a web application, backend services, and separate AI-powered services.
+
+| Component | Technology / Infrastructure |
+|:--|:--|
+| 🎨 **Frontend** | React application, Vercel |
+| ⚙️ **Backend** | Node.js, Express.js |
+| 🗄️ **Database** | MongoDB |
+| 🐍 **AI Services** | Python, FastAPI |
+| 🕸️ **Agentic Workflows** | LangGraph |
+| 🔎 **Knowledge Retrieval** | Qdrant |
+| 🎙️ **Voice Communication** | Exotel, Sarvam AI |
+| 🌐 **External Intelligence** | Open-Meteo, Google Maps APIs |
+
+The modular architecture allows the platform to expand across districts and states by onboarding:
+
+- Additional hospitals and healthcare facilities
+- More frontline health workers and doctors
+- Additional regional health information sources
+- More Indian languages
+- New AI-powered healthcare and administrative services
+
+---
+
+## 🔮 Future Vision
+
+Our vision is a unified, intelligent healthcare ecosystem for India where technology bridges every gap between citizens and healthcare services. We aspire to empower communities through multilingual AI, voice-first accessibility, connected healthcare networks, and proactive disease intelligence.
+
+By connecting citizens, frontline workers, doctors, hospitals, and public-health administrators, BharatSwasthya AI aims to transform healthcare from fragmented and reactive services into a seamless, inclusive, and preventive ecosystem that reaches every corner of India.
+
+---
+
+## 👥 Team HemaVajra
+
+| Team Member | GitHub Profile |
+|:--|:--|
+| **Harit Adesara** | [@harit-adesara](https://github.com/harit-adesara) |
+| **Fenil Koshti** | [@Fenil-1807](https://github.com/Fenil-1807) |
+
+---
+
+## 🔗 Project Links
+
+| Resource | Link |
+|:--|:--|
+| 💻 **GitHub Repository** | [BharatSwasthya AI](#) |
+| 🎬 **Project Demo and Videos** | [View Demo](#) |
+
+---
+
+## 📚 References
+
+1. Ministry of Health and Family Welfare, Government of India. *Annual Report 2023-24*, Chapter 6: E-Governance and Telemedicine.
+2. *National Health Accounts Estimates 2022-23*. Healthcare expenditure and out-of-pocket expenditure statistics.
+3. *Awareness of India's National Health Insurance Scheme (PM-JAY): A Cross-sectional Study Across Six States* (2023).
+4. National Health Mission (NHM). Official NHM-MIS data.
+5. International Journal of Creative Research Thoughts (2026). *Disparities in Healthcare Accessibility Between Rural and Urban Communities*.
+6. Ballard Brief. *Healthcare Access in Rural Communities in India*.
+7. Algondi, N. A. (2025). "Multilingual Voice AI Assistants for Bridging Language Gaps in Rural Healthcare." *International Journal of Scientific Research and Engineering Trends*, 11(2).
+8. Shenoy and D'Souza (2026). "Role of ASHA Workers in Empowering Community Health through ICT." *International Journal of Social Science Research*.
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-🇮🇳 Building a More Accessible Healthcare Future
+---
 
-One Platform. Smarter Healthcare. Better Awareness.
+**BharatSwasthya AI: Connecting Healthcare. Empowering Communities. Building a Healthier India.**
 
+Built with ❤️ by Team HemaVajra.
